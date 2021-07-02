@@ -34,7 +34,6 @@ disp('############################');
 
 b = -2 + 1i;
 
-
 % Resolvendo Letra (B)
 
 % Parte Real
@@ -61,20 +60,21 @@ d = z_mag * exp(z_rad * 1i);
 fprintf('\nVerificando resposta: %.0f + %.0fi\n', real(d), imag(d));
 
 % Plot Gráfico
-
 figure
-plot(real(a), imag(a), 'ro', real(b), imag(b), 'b*', 'linewidth', 2);
+plot(real(a), imag(a), 'ro', real(b), imag(b), 'b*', [0 0], [-4 4], 'k', [-4 4], [0 0], 'k', [0 ra], [0 ia], 'k', [0 rb], [0 ib], 'k');
 grid on;
 xlabel('Eixo Real');
 ylabel('Eixo Imaginário');
 
 xlim([-4 4]);
-ylim([0 4]);
+ylim([-4 4]);
 title('Plano Complexo - Número Polar');
 
-text(0.2+rb, ib, num2str(b), 'FontSize', 15);
+% Mostrando os números dentro do gráfico
+text(0.2+rb, 0.2+ib, num2str(b), 'FontSize', 15);
 text(0.2+ra, ia, num2str(a), 'FontSize', 15);
-legend('Número Complexo A', 'Número Complexo B');
+
+legend('Número Complexo A', 'Número Complexo B', 'Location', 'southwest');
 
 
 
