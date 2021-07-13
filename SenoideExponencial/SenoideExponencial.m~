@@ -1,0 +1,12 @@
+clc, clearvars, close all;
+
+% Senóides Variando Exponencialmente
+
+t = 0:0.01:5;
+A = 4;
+
+x = A*exp(-0.4*t) .* cos(6*t - 90*pi/180);
+
+figure
+plot(t, x, 'b', 'linewidth', 1.5)
+title('Senóide Variando Exponencialmente');

@@ -73,3 +73,10 @@ r*exp(2+1j*(theta - 2*pi*k1))
 1j^1j
 exp(-pi*(1+4*0)/2)
 
+%%
+clc, clearvars, close all;
+
+z = exp(1j*2*pi*2);
+
+log(z)
+
